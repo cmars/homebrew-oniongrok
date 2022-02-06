@@ -5,12 +5,12 @@
 class Oniongrok < Formula
   desc ""
   homepage ""
-  version "0.1.4"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/oniongrok/releases/download/v0.1.4/oniongrok_0.1.4_darwin_amd64.tar.gz"
-      sha256 "6ff49d4a05613d39a6b927ef9d73f4dd2a4368ea600b98295b579013996156f3"
+      url "https://github.com/cmars/oniongrok/releases/download/v0.2.0/oniongrok_0.2.0_darwin_amd64.tar.gz"
+      sha256 "299b62847d76c8dc538a6357d2fff511e29898709c4e143fb69049076fce6953"
 
       def install
         bin.install "oniongrok"
@@ -20,8 +20,8 @@ class Oniongrok < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/oniongrok/releases/download/v0.1.4/oniongrok_0.1.4_linux_amd64.tar.gz"
-      sha256 "59422b8c34ce6a76b35567c72fdb21e9980ef1fbfacb47f37b6dcf5531812284"
+      url "https://github.com/cmars/oniongrok/releases/download/v0.2.0/oniongrok_0.2.0_linux_amd64.tar.gz"
+      sha256 "bf4f574a8cfb9ca730a16f087fcea3e21ee6cbdbf59920b01e2778c1f56be7d0"
 
       def install
         bin.install "oniongrok"
