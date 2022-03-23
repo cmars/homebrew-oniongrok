@@ -5,23 +5,31 @@
 class Onionpipe < Formula
   desc ""
   homepage ""
-  version "1.0.0"
+  version "1.0.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cmars/onionpipe/releases/download/v1.0.0/onionpipe_1.0.0_darwin_amd64.tar.gz"
-      sha256 "bb13087c81ea030c573e5f927ab116880f500544a04014c3c95ef380203eabd6"
+    url "https://github.com/cmars/onionpipe/releases/download/v1.0.3/onionpipe_1.0.3_darwin_amd64.tar.gz"
+    sha256 "048de607416230a653d86a34834b82ceba7351c223093140b39f1bff46f3efb4"
 
-      def install
-        bin.install "onionpipe"
+    def install
+      bin.install "onionpipe"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Onionpipe
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/onionpipe/releases/download/v1.0.0/onionpipe_1.0.0_linux_amd64.tar.gz"
-      sha256 "dda9fbc0854e469d3ec408bcbd0d406f228fe970304f86e8ea5e702473c62d01"
+      url "https://github.com/cmars/onionpipe/releases/download/v1.0.3/onionpipe_1.0.3_linux_amd64.tar.gz"
+      sha256 "5b33b9f99440b1b4b153f1f2d3b1d2fbc3c0600ad867bdc9679407bd6237399d"
 
       def install
         bin.install "onionpipe"
