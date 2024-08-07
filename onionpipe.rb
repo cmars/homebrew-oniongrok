@@ -5,13 +5,13 @@
 class Onionpipe < Formula
   desc ""
   homepage ""
-  version "1.1.6"
+  version "1.1.7"
 
   depends_on "tor"
 
   on_macos do
-    url "https://github.com/cmars/onionpipe/releases/download/v1.1.6/onionpipe_1.1.6_darwin_amd64.tar.gz"
-    sha256 "ad983dc92d036a7020397a846959f5645c4adb9e65659e4c1d2afc612cf2341e"
+    url "https://github.com/cmars/onionpipe/releases/download/v1.1.7/onionpipe_1.1.7_darwin_amd64.tar.gz"
+    sha256 "4155c5113ecadec99c5ba17c0f66a49fdfa46e3efe8c66b203af41c011ab8698"
 
     def install
       bin.install "onionpipe"
@@ -31,8 +31,8 @@ class Onionpipe < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cmars/onionpipe/releases/download/v1.1.6/onionpipe_1.1.6_linux_amd64.tar.gz"
-        sha256 "af64d9c5201bb9cb2154af62b771d8422efbfe39aeb55adfee9a27fa321e4779"
+        url "https://github.com/cmars/onionpipe/releases/download/v1.1.7/onionpipe_1.1.7_linux_amd64.tar.gz"
+        sha256 "47af3c7e3ff30cf58e68c5c6d06afa1f01c00367e3c63f64950debb8ed03d2b3"
 
         def install
           bin.install "onionpipe"
